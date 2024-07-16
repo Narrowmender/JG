@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. James Gardner - Innovator</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #232323; /* Dark background */
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Fullscreen Particle Background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #2d75e3, #8121b6); /* Gradient background */
+      background-size: cover;
+      z-index: -1;
+    }
+
+    /* Centered Content */
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin: 0;
+      margin-bottom: 10px;
+      color: #fff; /* White text */
+    }
+
+    .content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #ddd; /* Light grey text */
+    }
+
+    .profiles-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8); /* White semi-transparent background */
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative; /* New addition for video and QR code positioning */
+    }
+
+    .profile:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile video, .profile img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      display: block; /* New addition for video and QR code display */
+    }
+
+    .profile:hover video, .profile:hover img {
+      transform: scale(1.05);
+    }
+
+    .profile span {
+      display: block;
+      margin-top: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333; /* Dark text for span */
+    }
+
+    .section {
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff; /* White heading */
+    }
+
+    .section p {
+      color: #bbb; /* Lighter grey text */
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Primary blue button */
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+      border-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2.5rem;
+      }
+
+      .content p {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fullscreen Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Centered Content -->
+  <div class="content container">
+    <h1>Dr. James Gardner</h1>
+    <p>Director of Innovation @ Narrowmender Labz LLC</p>
+
+    <div class="profiles-container">
+      <!-- Profile Video -->
+      <div class="profile">
+        <video src="https://i.imgur.com/rDVZ6vr.mp4" autoplay loop muted></video>
+        <span>Profile Video</span>
+      </div>
+
+      <!-- ORCID Profile -->
+      <div class="profile">
+        <a id="orcid-profile-url" href="https://orcid.org/0009-0001-9258-6074" target="_blank" rel="noopener noreferrer">
+          <img src="https://ptpimg.me/6y9a2m.png" alt="ORCID QR Code" />
+          <span>ORCID Profile</span>
+        </a>
+      </div>
+
+      <!-- ResearchGate Profile -->
+      <div class="profile">
+        <a id="researchgate-profile-url" href="https://www.researchgate.net/profile/James-Gardner-21" target="_blank" rel="noopener noreferrer">
+          <img src="https://ptpimg.me/19l378.png" alt="ResearchGate QR Code" />
+          <span>ResearchGate Profile</span>
+        </a>
+      </div>
+
+      <!-- Google Scholar Profile -->
+      <div class="profile">
+        <a id="google-scholar-profile-url" href="https://scholar.google.com/citations?user=yKc2Bi4AAAAJ" target="_blank" rel="noopener noreferrer">
+          <img src="https://ptpimg.me/b4at92.png" alt="Google Scholar QR Code" />
+          <span>Google Scholar Profile</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Section -->
+    <div class="section container">
+      <h2>Meet Dr. James Gardner</h2>
+      <p>Dr. James Gardner is a visionary innovator leading groundbreaking projects at Narrowmender Labz LLC. With a passion for integrating cutting-edge technologies, he pioneers solutions that redefine possibilities in artificial intelligence, robotics, and sustainable energy.</p>
+
+      <p>His extensive research spans domains from computational intelligence to bioinformatics, with notable contributions in machine learning algorithms and neural network architectures. Dr. Gardner's collaborative spirit fuels advancements in collaborative robotics and autonomous systems, aimed at enhancing productivity and sustainability.</p>
+
+      <a href="#contact" class="btn btn-primary">Contact Dr. Gardner</a>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis/dist/tfjs-vis.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-layers"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.3.0"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('particles.js loaded');
+    });
+  </script>
+</body>
+</html>
